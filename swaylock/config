@@ -1,0 +1,10 @@
+image=~/.config/artemiswp.jpg
+scaling=fill
+show-failed-attempts
+indicator
+ring-color=000000
+key-hl-color=ff69b4
+bs-hl-color=ff0000
+line-color=00000000
+inside-color=00000000
+separator-color=00000000

@@ -1,0 +1,135 @@
+{
+    "position": "top",
+    "margin-left": 5,
+    "margin-right": 5,
+    "margin-top": 0,
+    "height": 34,
+    "spacing": 10,
+    "mode": "dock",
+
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces"
+    ],
+
+    "hyprland/workspaces": {
+    "sort-by": "number",
+    "format": "",
+    "all-outputs": true,
+    "workspace-taskbar": {
+        "enable": true,
+        "update-active-window": true,
+        "icon-size": 18,
+        "icon-theme": ["Papirus", "hicolor"],
+        "on-click-window": "hyprctl dispatch focuswindow address:{address}"
+    },
+    "window-rewrite": {},
+    "window-rewrite-default": ""
+},
+
+
+    "modules-right": [
+        "group/bottom1",
+        "group/bottom2"
+    ],
+
+    "group/bottom1": {
+        "orientation": "inherit",
+        "modules": [
+            "privacy",
+            "idle_inhibitor",
+            "pulseaudio",
+            "network",
+            "bluetooth"
+        ]
+    },
+
+    "group/bottom2": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/clock",
+            "tray",
+            "battery",
+            "custom/power"
+        ]
+    },
+
+    "custom/power": {
+        "
+        format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout --protocol layer-shell"
+    },
+
+    "custom/launcher": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -show drun -terminal kitty"
+    },
+
+    "privacy": {
+        "icon-size": 18
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "scroll-step": 1.0,
+        "on-click": "pavucontrol"
+    },
+
+    "network": {
+        "interval": 2,
+        "format-wifi": "󰤨  ↑{bandwidthUpBytes} ↓{bandwidthDownBytes}",
+        "format-ethernet": "󰈀  ↑{bandwidthUpBytes} ↓{bandwidthDownBytes}",
+        "format-disconnected": "󰤭 disconnected",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n↑ {bandwidthUpBytes} ↓ {bandwidthDownBytes}",
+        "tooltip-format-ethernet": "{ifname}\n↑ {bandwidthUpBytes} ↓ {bandwidthDownBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "~/.config/waybar/scripts/rofi-wifi.sh"
+    },
+
+    "bluetooth": {
+        "format": "󰂯 {status}",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱 {num_connections}",
+        "format-no-controller": "",
+        "on-click": "~/.config/waybar/scripts/rofi-bluetooth.sh",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
+    "custom/clock": {
+    "exec": "date +'%a %b %d %-I:%M %p'",
+    "interval": 10,
+    "format": "{}"
+	},
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    }
+}

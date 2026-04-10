@@ -1,0 +1,24 @@
+window {
+    background-color: rgba(20, 10, 20, 0.9);
+}
+
+button {
+    color: #ff69b4;
+    background-color: rgba(40, 20, 40, 0.8);
+    border: 2px solid #ff69b4;
+    border-radius: 12px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: rgba(255, 105, 180, 0.3);
+    border-color: #ff1493;
+    color: #ff1493;
+}
+
+button:focus {
+    background-color: rgba(255, 105, 180, 0.4);
+    border-color: #ffb6c1;
+    color: #ffb6c1;
+}

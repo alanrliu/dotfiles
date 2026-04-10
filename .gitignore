@@ -1,0 +1,31 @@
+# Auth tokens and credentials
+rclone/
+git/
+mozilla/
+vesktop/
+spotify/
+Code/
+notion-calendar-electron/
+
+# Session/system data (not useful to share)
+pulse/
+session/
+dconf/
+baloofileinformationrc
+dolphinrc
+mimeapps.list
+pavucontrol.ini
+
+# Games
+StardewValley/
+
+# Misc
+simple-update-notifier/
+go/
+autostart/
+gedit/
+layout
+libreoffice/
+Thunar/
+xfce4/
+artemiswp.jpg

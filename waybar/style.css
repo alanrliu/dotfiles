@@ -1,0 +1,159 @@
+* {
+    font-size: 14px;
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", monospace;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+.background {
+    background: rgba(0, 0, 0, 0);
+}
+
+.module:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+}
+
+/* Left pill */
+.modules-left {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(20, 10, 20, 0.85);
+}
+
+/* Workspace buttons */
+#workspaces button {
+    padding: 0 4px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    color: #f0c0d0;
+    min-width: 0;
+    min-height: 0;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Taskbar window icons inside workspaces */
+#workspaces .taskbar-window {
+    padding: 2px 3px;
+    border-radius: 6px;
+    min-width: 0;
+    min-height: 0;
+}
+
+#workspaces .taskbar-window.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Right pills */
+#bottom1,
+#bottom2 {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(20, 10, 20, 0.85);
+}
+
+.module {
+    padding-left: 8px;
+    padding-right: 8px;
+    color: #f0c0d0;
+}
+
+#custom-launcher {
+    color: #ff69b4;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+#battery {
+    color: #ffb6c1;
+}
+
+#battery.warning {
+    color: #ffaa00;
+}
+
+#battery.critical {
+    color: #ff4444;
+}
+
+#idle_inhibitor {
+    color: #ff85c2;
+}
+
+#idle_inhibitor.activated {
+    color: #ff1493;
+}
+
+#pulseaudio {
+    color: #ff69b4;
+}
+
+#pulseaudio.muted {
+    color: #888888;
+}
+
+#clock {
+    color: #ffb6c1;
+    font-weight: bold;
+}
+
+#custom-power {
+    color: #ff1493;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+#bluetooth {
+    color: #ff85c2;
+}
+
+#bluetooth.disabled {
+    color: #555555;
+}
+
+#network {
+    color: #ffb6c1;
+}
+
+#network.disconnected {
+    color: #ff4444;
+}
+
+#tray {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#privacy-item {
+    color: #f0c0d0;
+}
+
+.popup {
+    font-size: 14px;
+    background-color: rgba(20, 10, 20, 0.95);
+    color: #f0c0d0;
+    border: 1px solid #ff69b4;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+tooltip {
+    background-color: white;
+    border: 1px solid #ff69b4;
+    border-radius: 8px;
+}
+
+tooltip * {
+    background-color: white;
+    color: #1a1a1a;
+}
